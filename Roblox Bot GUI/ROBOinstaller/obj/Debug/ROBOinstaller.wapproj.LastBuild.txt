@@ -1,0 +1,12 @@
+C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.5\System.Core.dll
+C:\Users\adamh\source\repos\Roblox Bot GUI\ROBOinstaller\Images\SplashScreen.scale-200.png
+C:\Users\adamh\source\repos\Roblox Bot GUI\ROBOinstaller\Images\LockScreenLogo.scale-200.png
+C:\Users\adamh\source\repos\Roblox Bot GUI\ROBOinstaller\Images\Square150x150Logo.scale-200.png
+C:\Users\adamh\source\repos\Roblox Bot GUI\ROBOinstaller\Images\Square44x44Logo.scale-200.png
+C:\Users\adamh\source\repos\Roblox Bot GUI\ROBOinstaller\Images\Square44x44Logo.targetsize-24_altform-unplated.png
+C:\Users\adamh\source\repos\Roblox Bot GUI\ROBOinstaller\Images\StoreLogo.png
+C:\Users\adamh\source\repos\Roblox Bot GUI\ROBOinstaller\Images\Wide310x150Logo.scale-200.png
+C:\Users\adamh\source\repos\Roblox Bot GUI\ROBOinstaller\bin\AnyCPU\Debug\resources.pri
+C:\Users\adamh\source\repos\Roblox Bot GUI\Roblox Bot GUI\bin\Debug\Roblox Bot GUI.exe
+C:\Users\adamh\source\repos\Roblox Bot GUI\Roblox Bot GUI\bin\Debug\Roblox Bot GUI.exe.config
+C:\Users\adamh\source\repos\Roblox Bot GUI\Roblox Bot GUI\bin\Debug\Roblox Bot GUI.pdb

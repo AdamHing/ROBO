@@ -1,0 +1,27 @@
+C:\Users\adamh\source\repos\Roblox Bot GUI\ROBOinstaller\bin\x86\Release\Roblox Bot GUI\Roblox Bot GUI.exe
+C:\Users\adamh\source\repos\Roblox Bot GUI\ROBOinstaller\bin\x86\Release\Roblox Bot GUI\Roblox Bot GUI.exe.config
+C:\Users\adamh\source\repos\Roblox Bot GUI\ROBOinstaller\bin\x86\Release\Roblox Bot GUI\Roblox Bot GUI.pdb
+C:\Users\adamh\source\repos\Roblox Bot GUI\ROBOinstaller\bin\x86\Release\resources.pri
+C:\Users\adamh\source\repos\Roblox Bot GUI\ROBOinstaller\bin\x86\Release\AppxManifest.xml
+C:\Users\adamh\source\repos\Roblox Bot GUI\ROBOinstaller\bin\x86\Release\ROBOinstaller.build.appxrecipe
+C:\Users\adamh\source\repos\Roblox Bot GUI\ROBOinstaller\bin\x86\Release\System.Core.dll
+C:\Users\adamh\source\repos\Roblox Bot GUI\ROBOinstaller\obj\x86\Release\ROBOinstaller.wapprojAssemblyReference.cache
+C:\Users\adamh\source\repos\Roblox Bot GUI\ROBOinstaller\obj\x86\Release\ROBOinstaller.wapproj.CoreCompileInputs.cache
+C:\Users\adamh\source\repos\Roblox Bot GUI\ROBOinstaller\obj\x86\Release\ROBOinstaller.wapproj.CopyComplete
+C:\Users\adamh\source\repos\Roblox Bot GUI\ROBOinstaller\obj\x86\Release\priconfig.xml
+C:\Users\adamh\source\repos\Roblox Bot GUI\ROBOinstaller\obj\x86\Release\priconfig.xml.intermediate
+C:\Users\adamh\source\repos\Roblox Bot GUI\ROBOinstaller\obj\x86\Release\unfiltered.layout.resfiles
+C:\Users\adamh\source\repos\Roblox Bot GUI\ROBOinstaller\obj\x86\Release\unfiltered.layout.resfiles.intermediate
+C:\Users\adamh\source\repos\Roblox Bot GUI\ROBOinstaller\obj\x86\Release\filtered.layout.resfiles
+C:\Users\adamh\source\repos\Roblox Bot GUI\ROBOinstaller\obj\x86\Release\filtered.layout.resfiles.intermediate
+C:\Users\adamh\source\repos\Roblox Bot GUI\ROBOinstaller\obj\x86\Release\excluded.layout.resfiles
+C:\Users\adamh\source\repos\Roblox Bot GUI\ROBOinstaller\obj\x86\Release\excluded.layout.resfiles.intermediate
+C:\Users\adamh\source\repos\Roblox Bot GUI\ROBOinstaller\obj\x86\Release\resources.resfiles
+C:\Users\adamh\source\repos\Roblox Bot GUI\ROBOinstaller\obj\x86\Release\resources.resfiles.intermediate
+C:\Users\adamh\source\repos\Roblox Bot GUI\ROBOinstaller\obj\x86\Release\pri.resfiles
+C:\Users\adamh\source\repos\Roblox Bot GUI\ROBOinstaller\obj\x86\Release\pri.resfiles.intermediate
+C:\Users\adamh\source\repos\Roblox Bot GUI\ROBOinstaller\obj\x86\Release\qualifiers.txt
+C:\Users\adamh\source\repos\Roblox Bot GUI\ROBOinstaller\obj\x86\Release\qualifiers.txt.intermediate
+C:\Users\adamh\source\repos\Roblox Bot GUI\ROBOinstaller\obj\x86\Release\MultipleQualifiersPerDimensionFound.txt
+C:\Users\adamh\source\repos\Roblox Bot GUI\ROBOinstaller\obj\x86\Release\ProjectArchitectures.txt
+C:\Users\adamh\source\repos\Roblox Bot GUI\ROBOinstaller\obj\x86\Release\ROBOinstaller.wapproj.LastBuild.txt

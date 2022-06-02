@@ -1,0 +1,2 @@
+MainPackage=C:\Users\adamh\source\repos\Roblox Bot GUI\ROBOinstaller\bin\x86\Release\ROBOinstaller_1.0.1.0_x86.msix
+SymbolPackage=C:\Users\adamh\source\repos\Roblox Bot GUI\ROBOinstaller\obj\x86\Release\Symbols\ROBOinstaller_1.0.1.0_x86.appxsym

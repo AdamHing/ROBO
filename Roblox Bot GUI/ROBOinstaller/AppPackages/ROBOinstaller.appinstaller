@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AppInstaller
+	Uri="file:///D:/coding/ROBOinstaller.appinstaller"
+	Version="1.0.1.0" xmlns="http://schemas.microsoft.com/appx/appinstaller/2017/2">
+	<MainBundle
+		Name="68863a48-e304-4db6-b5fe-acaffb15fd35"
+		Version="1.0.1.0"
+		Publisher="CN=Adam Hing"
+		Uri="file:///D:/coding/ROBOinstaller_1.0.1.0_Test/ROBOinstaller_1.0.1.0_x86_x64.msixbundle" />
+	<UpdateSettings>
+		<OnLaunch
+			HoursBetweenUpdateChecks="0" />
+	</UpdateSettings>
+</AppInstaller>

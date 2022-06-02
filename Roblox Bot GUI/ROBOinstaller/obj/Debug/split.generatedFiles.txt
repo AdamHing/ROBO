@@ -1,0 +1,2 @@
+obj\Debug\split.pri
+obj\Debug\split.map.txt

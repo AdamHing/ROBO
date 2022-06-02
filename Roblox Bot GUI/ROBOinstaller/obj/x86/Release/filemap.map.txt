@@ -1,0 +1,16 @@
+﻿[ResourceMetadata]
+"ResourceDimensions"		"scale-200"
+"ResourceDimensions"		"language-en-us"
+
+[Files]
+"C:\Users\adamh\source\repos\Roblox Bot GUI\ROBOinstaller\obj\x86\Release\filemap.pri"			"resources.pri"
+"C:\Users\adamh\source\repos\Roblox Bot GUI\ROBOinstaller\obj\x86\Release\PackageLayout\System.Core.dll"			"System.Core.dll"
+"C:\Users\adamh\source\repos\Roblox Bot GUI\ROBOinstaller\obj\x86\Release\PackageLayout\Roblox Bot GUI\Roblox Bot GUI.exe.config"			"Roblox Bot GUI\Roblox Bot GUI.exe.config"
+"C:\Users\adamh\source\repos\Roblox Bot GUI\ROBOinstaller\obj\x86\Release\PackageLayout\Roblox Bot GUI\Roblox Bot GUI.exe"			"Roblox Bot GUI\Roblox Bot GUI.exe"
+"C:\Users\adamh\source\repos\Roblox Bot GUI\ROBOinstaller\obj\x86\Release\PackageLayout\Images\Wide310x150Logo.scale-200.png"			"Images\Wide310x150Logo.scale-200.png"
+"C:\Users\adamh\source\repos\Roblox Bot GUI\ROBOinstaller\obj\x86\Release\PackageLayout\Images\StoreLogo.png"			"Images\StoreLogo.png"
+"C:\Users\adamh\source\repos\Roblox Bot GUI\ROBOinstaller\obj\x86\Release\PackageLayout\Images\Square44x44Logo.targetsize-24_altform-unplated.png"			"Images\Square44x44Logo.targetsize-24_altform-unplated.png"
+"C:\Users\adamh\source\repos\Roblox Bot GUI\ROBOinstaller\obj\x86\Release\PackageLayout\Images\Square44x44Logo.scale-200.png"			"Images\Square44x44Logo.scale-200.png"
+"C:\Users\adamh\source\repos\Roblox Bot GUI\ROBOinstaller\obj\x86\Release\PackageLayout\Images\Square150x150Logo.scale-200.png"			"Images\Square150x150Logo.scale-200.png"
+"C:\Users\adamh\source\repos\Roblox Bot GUI\ROBOinstaller\obj\x86\Release\PackageLayout\Images\SplashScreen.scale-200.png"			"Images\SplashScreen.scale-200.png"
+"C:\Users\adamh\source\repos\Roblox Bot GUI\ROBOinstaller\obj\x86\Release\PackageLayout\Images\LockScreenLogo.scale-200.png"			"Images\LockScreenLogo.scale-200.png"
