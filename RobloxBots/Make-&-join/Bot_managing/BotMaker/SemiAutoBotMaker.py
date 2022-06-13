@@ -10,13 +10,11 @@ import os
 import csv
 import pandas as pd
 from pathlib import Path
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
+#& d:/coding/Projects/ROBO/venv/Scripts/python.exe "d:/coding/Projects/ROBO/RobloxBots/Make-&-join/Bot_managing/BotMaker/SemiAutoBotMaker.py" 177263364 3 AA12ISGARBAGE378 
 
-from configparser import ConfigParser # make a thing for storing the password with the names 
 
-#& d:/coding/Projects/ROBO/venv/Scripts/python.exe "d:/coding/Projects/ROBO/RobloxBots/Make-&-join/Bot_managing/BotMaker/SemiAutoBotMaker.py" 177263364 6 AA12ISGARBAGE378 
-
-
-#6756 Amethyst Ln 75023 check where that is. saints sent it in discord while talking about a play date with faber or maybe emerald
 #use right after making so you dont have to save
 
 #root dir of project
@@ -62,10 +60,6 @@ N = 18    # name length
 C = 16    #bots per squad
 overflowfile =project_dir +"\\acounts"+"\\overflow"+".csv"# path var
 
-
-# f = open(dir_path+r'\valid-names.csv','w')
-# f.truncate(0)
-
 for i in range(args.NumOfBots):
     # gererate random name
     name = ''.join(random.choices(string.ascii_uppercase + string.digits + string.ascii_lowercase, k=N))
@@ -82,21 +76,25 @@ for i in range(args.NumOfBots):
         invalid = invalid+1
         print(name + " is invalid: on blacklist")
     else:
+        print("worked")
         #print valid names to csv file
-        f = open(dir_path+r'\valid-names.csv','a')
-        f.write(name+'\n') 
-    # close the file
-    f.close()
+        # f = open(dir_path+r'\valid-names.csv','a')
+        # f.write(name+'\n') 
+   
+    # f.close()
     print(name)
 #===========================use names to make bots=========================================
-#sobhan1384
+
 
 #enters username and password into roblox and goes to the game link.
 
     time.sleep(1)
-    # driver = webdriver.Chrome(ConfigPaths["ChromeDriver"])
-    driver = webdriver.Chrome(str(project_dir)+r'\RobloxBots\Settings&Config\WebDriver\chromedriver.exe')
     
+    #driver = webdriver.Chrome(str(project_dir)+r'\RobloxBots\Settings&Config\WebDriver\chromedriver.exe')
+    print("heeeooeo")
+    print(ChromeDriverManager().install())
+    driver = webdriver.Chrome(ChromeDriverManager().install())
+
     driver.get("https://www.roblox.com/")
     time.sleep(2)
     
@@ -122,11 +120,14 @@ for i in range(args.NumOfBots):
     username.send_keys(name)
     
     time.sleep(1)
-    ValidationOutput = driver.find_element_by_id("signup-usernameInputValidation").text
-    if ValidationOutput:
-        print(name)
-        print("Username cannot be used")
-        print("Reason:", ValidationOutput)
+    
+#===============Sends friend request to leader=====================================
+    if args.Mode==1:
+        ValidationOutput = driver.find_element_by_id("signup-usernameInputValidation").text
+        if ValidationOutput:
+            print(name)
+            print("Username cannot be used")
+            print("Reason:", ValidationOutput)
     else:
         #store valid and verified roblox bot names.
 
@@ -150,17 +151,12 @@ for i in range(args.NumOfBots):
             signInButton.click()#game-details-play-button-container > button
             time.sleep(1)
             if (df[df.columns[0]].count()) >= -1 + C:
-                os.rename(project_dir+"\\acounts"+'\\overflow.csv', project_dir+"\\acounts"+'\\Squad_'+(df.columns[0])+".csv")
-
+                os.rename(overflowfile, project_dir+"\\acounts"+'\\Squad_'+(df.columns[0])+".csv")
 
 #captcha bypass/or bot will idealy go somewere here  ¯\_(ツ)_/¯ or sobhans nephew. idk
 #==-=-==-===-====-===---------------=====-====-===-===-=====-=-=-=-=-=-=-=--==-----
         input()     
 
-
-
-#===============Sends friend request to leader=====================================
-    if args.Mode==1:
         print("starting friend request accept")
         #dangerous======================================================================================================================
         cookies = driver.get_cookies()
@@ -185,7 +181,3 @@ for i in range(args.NumOfBots):
         input()#check if user is ready to make the next bot
         
 print(str(invalid)+" names failed.")
-
-
-
-

@@ -7,6 +7,8 @@ from datetime import datetime
 import os
 import argparse
 import robloxpy as rpy
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
 # d:/coding/Projects/ROBO/venv/Scripts/python.exe "d:/coding/Projects/ROBO/RobloxBots/Make-&-join/JoinGame/runbots_V3.py" acounts\BotList.csv 1234 5 AA12ISGARBAGE378
 
 
@@ -50,16 +52,14 @@ options = webdriver.ChromeOptions()                 #roblox-player, RobloxPlayer
 prefs = {"protocol_handler": {"excluded_schemes": {"Roblox": "false"}}}
 options.add_experimental_option("prefs", prefs)
 
+#os.startfile('Multiple_ROBLOX.exe') #runs program to allow multiple roblox windows
 
-#gets username and password form xlsx
+#gets username 
 try:
     dframe = pd.read_csv(args.ListPath,nrows=args.NumOfBots)
 
 except:
     print("could not find .csv file")
-
-
-
 
 names = pd.DataFrame(dframe)
 print(names)
@@ -71,16 +71,16 @@ print("Wazzup my homi")
 
 #enters username and password into roblox and goes to the game link.
 
-
-for x in nameList:
+print()
+for usernameStr in nameList:
     time.sleep(1)
 
-    print(x)
- 
-    driver = webdriver.Chrome("C:\webdrivers\chromedriver", options=options)
+    print(usernameStr)
+    driver = webdriver.Chrome(ChromeDriverManager().install())
+    
     driver.get("https://www.roblox.com/login")
     time.sleep(3)
-    usernameStr = x
+    
     
 
     username = driver.find_element_by_id('login-username')
@@ -106,6 +106,7 @@ for x in nameList:
         JoinFriendButton.click()
 
         #clicks the "open roblox" popup
+        # replace with "open from desktop" at a later date
         start = pyautogui.locateCenterOnScreen('OpenRobloxGame.PNG')
         print(start)
         if start == None:
