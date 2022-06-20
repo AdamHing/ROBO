@@ -45,10 +45,6 @@ LogFileSaveLocation = cwd+"\BotCountLog"
 botcount = LogFileSaveLocation +r"\bot_count_"+current_time+ ".txt"
 botexeptons = LogFileSaveLocation + r"\exeption_count_"+current_time+ ".txt"
 
-
-# f = open(botcount, "w") 
-# be = open(botexeptons, "w")
-
 f = open(botcount, "a") 
 be = open(botexeptons, "a")
 
@@ -62,20 +58,6 @@ options.add_experimental_option("prefs", prefs)
 #make sure you have a friend who is online for the bots to join
 
 def read_excel(filename, nrows):
-    """Read out a subset of rows from the first worksheet of an excel workbook.
-    This function will not load more excel rows than necessary into memory, and is 
-    therefore well suited for very large excel files.
-    Parameters
-    ----------
-    filename : str or file-like object
-        Path to excel file.
-    nrows : int
-        Number of rows to parse (starting at the top).
-    Returns
-    -------
-    pd.DataFrame
-        Column labels are constructed from the first row of the excel worksheet.
-    """
     # Parameter `read_only=True` leads to excel rows only being loaded as-needed
     book = openpyxl.load_workbook(filename=filename, read_only=True, data_only=True)
     first_sheet = book.worksheets[0]
@@ -122,7 +104,7 @@ print("Wazzup my homi")
 botcount = 0
 botexeptions = 0
 for x,y in zip(nameList, passwordList):
-    
+
     time.sleep(1)
 
     print(x)
