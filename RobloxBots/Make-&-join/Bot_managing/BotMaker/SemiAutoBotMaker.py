@@ -13,7 +13,7 @@ from random import randint
 
 #redus beacon/ pipeline/ talk to other programs fast. 
 
-#& d:/coding/Projects/ROBO/venv/Scripts/python.exe "d:/coding/Projects/ROBO/RobloxBots/Make-&-join/Bot_managing/BotMaker/SemiAutoBotMaker.py" 177263364 3 AA12ISGARBAGE378 
+
 
 #use right after making so you dont have to save
 
