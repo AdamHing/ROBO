@@ -9,7 +9,7 @@ import argparse
 import robloxpy as rpy
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
-# d:/coding/Projects/ROBO/venv/Scripts/python.exe "d:/coding/Projects/ROBO/RobloxBots/Make-&-join/JoinGame/runbots_V3.py" acounts\BotList.csv 1234 5 AA12ISGARBAGE378
+
 
 
 # import logging
@@ -37,11 +37,13 @@ my_parser.add_argument('Password',metavar='Password',type=str,help='password for
 # Execute the parse_args() method
 args = my_parser.parse_args()
 
-
 print(args.GameURL)
 print(args.ListPath)
 print(args.NumOfBots)
 print(args.Password)
+#======join game from robloxpy -============
+ BrowserID = random.randint(10000000000, 99999999999)
+    webbrowser.open(f"roblox-player:1+launchmode:play+gameinfo:{Gamesession}+launchtime:{int(time()*1000)}+placelauncherurl:https%3A%2F%2Fassetgame.roblox.com%2Fgame%2FPlaceLauncher.ashx%3Frequest%3DRequestGame%26browserTrackerId%3D{BrowserID}%26placeId%3D{PlaceId}%26isPlayTogetherGame%3Dfalse+browsertrackerid:{BrowserID}+robloxLocale:en_us+gameLocale:en_us")
 
 #LogFiles
 cwd = os.getcwd()
@@ -57,7 +59,6 @@ options.add_experimental_option("prefs", prefs)
 #gets username 
 try:
     dframe = pd.read_csv(args.ListPath,nrows=args.NumOfBots)
-
 except:
     print("could not find .csv file")
 
@@ -80,7 +81,6 @@ for usernameStr in nameList:
     
     driver.get("https://www.roblox.com/login")
     time.sleep(3)
-    
     
 
     username = driver.find_element_by_id('login-username')
