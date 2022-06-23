@@ -7,31 +7,35 @@ import subprocess as sp
 import matplotlib as mpl
 import numpy as np
 from colorama import init, Fore
+import colorama as cr
+
 init(autoreset=True)
 
 
 
-print("Make Bots  (1)")
-print("Deploy bots(2)")
+print("Make Bots   (1)")
+print("Deploy bots (2)")
 print()
 mode = input("input: ") #run bots or make bots 
 
 if mode =="1":
     #make bots
     print("Red text is optional and will be auto generated if left blank.")
-    source = input(Fore.RED + "Custom list & passwords: ")
-    source = input(Fore.RED + "Leader list or name: ")
-    source = input("Number of bots: ")
-    
-    print("Number of bots          (1)")
-    print("       (1)")
-
-
-
+    bots_source = input(Fore.RED + "Custom list & passwords: ")
+    leaders_source = input(Fore.RED + "Leader list or name: ")
+    cr.Back.RED
+    numofbots = input( cr.Back.RED + "Number of bots: ")
+    squad_size = input("Number of bots per leader: ")
+    password = input("Password for each account: ")
 
 elif mode == "2":
     #deploy bots
-    print("Make Bots  (2)")
+    squad_source = input(Fore.RED + "Souce file of squad: ")
+    numofbots = input("Number of bots: ")
+    targetid = input("ID of the target game: ")
+    # extra commands to controll the bots once inside the game; spam chat, vote kick, lag the server, follow players, go to location, synchronized dancing ect.
+
+
 
 
 
@@ -54,7 +58,3 @@ print(Fore.RED + 'some red text')
 
 res= pyg.figlet_format("Hello World")   
 print(res)  
-
-
-
-
