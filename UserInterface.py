@@ -35,8 +35,9 @@ elif mode == "2":
     targetid = input("ID of the target game: ")
     # extra commands to controll the bots once inside the game; spam chat, vote kick, lag the server, follow players, go to location, synchronized dancing ect.
 
-
-
+else:
+    print("not valid")
+#blslkgslkjlew
 
 
 mode = input("Custom list of usernames and passwords: ")
