@@ -16,9 +16,6 @@ import argparse
 #_./\./\._/(\^,,_,,^/)_./\./\./\
 # Create the parser
 
-
-
-
 my_parser = argparse.ArgumentParser()
 
 # Path to the .xlsx of bot passwords and usernames
