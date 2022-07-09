@@ -3,9 +3,9 @@ import time
 #imports module for moving the character
 import movePlayer_Lite as mp
 import keyboard as kb
-# import fakechat as fc
-from random import randrange
 
+
+#pretty sure this can be optimized with asyncio.  ¯\_(ツ)_/¯
 
 #move up and down
 print("MovePlayerScript")
@@ -13,9 +13,7 @@ def move_up_and_down():
     mp.forward()
     time.sleep(1)
     mp.back()
-    
     time.sleep(4)
-
     mp.chat("this is a test")
 
 #phantom forces function
@@ -57,7 +55,7 @@ while 1:
         
         pidforlib = str(current_process.pid)
         #this code cycles through all the roblox instances by their pid and focuses on the window.
-        openlib = "python focuslib.py -p " + pidforlib 
+        openlib = r"python RobloxBots\Make-&-join\JoinGame\WindowFocuser\focuslib.py -p " + pidforlib 
         psutil.Popen(openlib)
         time.sleep(4)
 

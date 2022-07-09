@@ -16,7 +16,7 @@ pids = args["pid"]
 
 def enum_window_callback(hwnd, pid):
     # i dont know how or why but it just works
-    a,current_pid = win32process.GetWindowThreadProcessId(hwnd)
+    a,current_pid = win32process.GetWindowThreadProcessId(hwnd) # wtf is that 'a' just hanging around there?
     # print(pid)
     # print(current_pid)
     if pid == current_pid and win32gui.IsWindowVisible(hwnd):

@@ -10,11 +10,7 @@ from pathlib import Path
 from webdriver_manager.chrome import ChromeDriverManager
 from random import randint
 
-
 #redus beacon/ pipeline/ talk to other programs fast. 
-
-
-
 #use right after making so you dont have to save
 
 #root dir of project
@@ -30,8 +26,10 @@ my_parser.add_argument('LeaderID',metavar='LeaderID',type=str,help='the ID of th
 my_parser.add_argument('NumOfBots',metavar='NumOfBots',type=int,help='the num of bots to run')
 #password that all the accounts will use
 my_parser.add_argument('Password',metavar='Password',type=str,help='password that all the accounts will use')
-# URL for leader account
+# test mode or run mode
 my_parser.add_argument('Mode',metavar='Mode',type=int,help='testing mode(0) or working mode(1)')
+# the number of bots that will be in each squad recomended 16
+my_parser.add_argument('Squad_size',metavar='Squad_size',type=str,help='the number of bots that will be in each squad')
 # Execute the parse_args() method
 args = my_parser.parse_args()
 
@@ -39,6 +37,7 @@ print(args.LeaderID)
 print(args.NumOfBots)
 print(args.Password)
 print(args.Mode)
+print(args.Squad_size)
 
 #==========================random valid name generator==========================("valid" = filterout bad substrings)
 blacklist = []
@@ -47,12 +46,16 @@ with open(dir_path+ r"\bad-words3.csv", newline='') as inputfile:
     for row in csv.reader(inputfile):
         blacklist.append(row[0])
 
-invalid = 0
-#random str generator
-N = 18    # name length
-C = 16    #bots per squad
+if args.Squad_size == None:
+    C= 16
+else:
+    C = args.Squad_size #bots per squad
+
+N = 18              # name length
+
 overflowfile =project_dir +"\\acounts"+"\\overflow"+".csv"# path var
 
+invalid = 0
 for i in range(args.NumOfBots):
     #================================= gererate random name=====================================
     name = ''.join(random.choices(string.ascii_uppercase + string.digits + string.ascii_lowercase, k=N))
@@ -87,11 +90,8 @@ for i in range(args.NumOfBots):
         bdayday ="0"+ bdayday
 #===========================make the bot=========================================
 #enters username and password into roblox and goes to the game link.
-    time.sleep(1)
-    print("heeeooeo")
     print(ChromeDriverManager().install())
     driver = webdriver.Chrome(ChromeDriverManager().install())
-
     driver.get("https://www.roblox.com/")
     time.sleep(2)
     

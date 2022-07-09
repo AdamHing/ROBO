@@ -1,4 +1,4 @@
-#just for moving character around so bot does not get kicked for afk
+#just for moving character around to stop the bots from being kicked for inactivity. 
 import pydirectinput as pdi
 # import win32gui as wg
 

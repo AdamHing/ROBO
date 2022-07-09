@@ -8,8 +8,6 @@ import robloxpy as rpy
 import os
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
-
-
 my_parser = argparse.ArgumentParser()
 
 # Path to the .xlsx of bot passwords and usernames
@@ -39,10 +37,7 @@ print(args.Password)
 #list of usernames to be used.
 nameList = []
 
-
 #==========================random name generator==========================
-
-
 if args.Custom_random == "R":
 
     N = 18  #chars in username
@@ -60,8 +55,6 @@ if args.Custom_random == "R":
         nameList.append(name)
         print(name)
         print(nameList)
-
-
 
 #===========================gets username from custom list=====================
 elif args.Custom_random =="C":

@@ -1,3 +1,4 @@
+from operator import le
 from selenium import webdriver
 import pandas as pd
 import time
@@ -9,9 +10,6 @@ import argparse
 import robloxpy as rpy
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
-
-
-
 # import logging
 #=========================run exe with arguments============================================================
 #https://github.com/Hexcede/Roblox-Wrapper
@@ -42,11 +40,8 @@ print(args.ListPath)
 print(args.NumOfBots)
 print(args.Password)
 #======join game from robloxpy -============
- BrowserID = random.randint(10000000000, 99999999999)
-    webbrowser.open(f"roblox-player:1+launchmode:play+gameinfo:{Gamesession}+launchtime:{int(time()*1000)}+placelauncherurl:https%3A%2F%2Fassetgame.roblox.com%2Fgame%2FPlaceLauncher.ashx%3Frequest%3DRequestGame%26browserTrackerId%3D{BrowserID}%26placeId%3D{PlaceId}%26isPlayTogetherGame%3Dfalse+browsertrackerid:{BrowserID}+robloxLocale:en_us+gameLocale:en_us")
-
-#LogFiles
 cwd = os.getcwd()
+
 now = datetime.now()
 current_time = now.strftime("%Hh%M")
 
@@ -54,8 +49,7 @@ options = webdriver.ChromeOptions()                 #roblox-player, RobloxPlayer
 prefs = {"protocol_handler": {"excluded_schemes": {"Roblox": "false"}}}
 options.add_experimental_option("prefs", prefs)
 
-#os.startfile('Multiple_ROBLOX.exe') #runs program to allow multiple roblox windows
-
+os.startfile('Multiple_ROBLOX.exe') #runs program to allow multiple roblox windows
 #gets username 
 try:
     dframe = pd.read_csv(args.ListPath,nrows=args.NumOfBots)
@@ -70,15 +64,18 @@ nameList = names.values.tolist()
 print(nameList)
 print("Wazzup my homi")
 
+leadername = dframe.columns.values[0]
+print(leadername)
+leaderID = rpy.User.External.GetID(leadername)
+print(leaderID)
 #enters username and password into roblox and goes to the game link.
-
 print()
 for usernameStr in nameList:
+
     time.sleep(1)
 
     print(usernameStr)
     driver = webdriver.Chrome(ChromeDriverManager().install())
-    
     driver.get("https://www.roblox.com/login")
     time.sleep(3)
     
@@ -91,15 +88,14 @@ for usernameStr in nameList:
     time.sleep(2)
     signInButton = driver.find_element_by_id('login-button')
     signInButton.click()#game-details-play-button-container > button
+
     input()
+
     time.sleep(4)
-    leadername = pd.DataFrame.head()
-    print(leadername)
-    leaderID = rpy.User.External.GetID(leadername)
-    
+   
     driver.get("https://www.roblox.com/users/{}/profile".format(leaderID))
     time.sleep(4)
-    botcount = botcount + 1
+    
     try:
         #clicks the join friend button
         JoinFriendButton = driver.find_element_by_class_name("profile-join-game")
@@ -126,5 +122,6 @@ print("All bots online.")
 time.sleep(5)
 
 #focus on window for afkness
-FocusOnWin = "python " +cwd+"\WidnowFocuser\FocusOnWin.py"
+FocusOnWin = "python " + "RobloxBots\Make-&-join\JoinGame\WindowFocuser\FocusOnWin.py"
 psutil.Popen(FocusOnWin)
+
