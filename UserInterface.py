@@ -1,16 +1,15 @@
 import pyfiglet as pyg  
-import argparse
-import sys
-import os
-from subprocess import *
+import subprocess
 from colorama import init, Fore,Style
 from pathlib import Path
+import psutil
+import RobloxBots.support.commands as commands
+import asyncio
+
+#will display a pyplot of the squads
+#commands.commandstwo.poplot()
 
 
-#run(["start", "/wait", "cmd", "/K", "echo test", "arg /?\^"], shell=True)
-
-
-os.system("start /B start cmd.exe @cmd /k {'echo test'}")
 init(autoreset=True)
 
 
@@ -22,7 +21,8 @@ print("Make Bots   (1)")
 print("Deploy bots (2)")
 print()
 
-x =1
+
+x = 1
 while x == 1:
     x = 0
     mode = input("input: ") #run bots or make bots 
@@ -32,20 +32,20 @@ while x == 1:
         bots_source = input(Fore.RED + "Custom list & passwords: ")
         
         print(Style.RESET_ALL)
-        if not(bots_source and leaders_source):
-            leaders_source = input("Leader ID: ")
+        if not(bots_source and leaderId):
+            leaderId = input("Leader ID: ")
             squad_size = input("Number of bots per squade recomended 16: ")
             numofbots = input("Number of bots: ")
             
-            
             password = input("Password for each account: ")
-
             runmode = input("Run mode: ")
 #=================open new window here
-        c = 'python project_dir/RobloxBots/Make-&-join/BotMaker/SemiAutoBotMaker.py', leaders_source, numofbots, password,runmode,squad_size
-        # os.system("start /wait cmd /k {c}")
+        botMaker = project_dir + '/venv/Scripts/python.exe ' +'"'+project_dir + r'\RobloxBots\Make-&-join\BotMaker\SemiAutoBotMaker.py'+'"'+" "+ leaderId+ " "+numofbots+ " "+password + " "+runmode+ " "+squad_size
+        print(botMaker)
+        
+        subprocess.Popen(botMaker)
+       
 
-        #os.system("start /B start cmd.exe @cmd /k {dir}"
 
     elif mode == "2":
         #deploy bots
@@ -64,3 +64,13 @@ print(Fore.RED + 'some red text')
 
 res= pyg.figlet_format("Hello World")   
 print(res)
+
+#some kind of comand thing
+
+
+
+while True:
+    cmd = input("> ")
+    #some thing like this 
+    # output = commands.commandstwo
+    #print(output)

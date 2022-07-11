@@ -29,7 +29,7 @@ my_parser.add_argument('Password',metavar='Password',type=str,help='password tha
 # test mode or run mode
 my_parser.add_argument('Mode',metavar='Mode',type=int,help='testing mode(0) or working mode(1)')
 # the number of bots that will be in each squad recomended 16
-my_parser.add_argument('Squad_size',metavar='Squad_size',type=str,help='the number of bots that will be in each squad')
+my_parser.add_argument('Squad_size',metavar='Squad_size',type=int,help='the number of bots that will be in each squad')
 # Execute the parse_args() method
 args = my_parser.parse_args()
 
@@ -46,10 +46,7 @@ with open(dir_path+ r"\bad-words3.csv", newline='') as inputfile:
     for row in csv.reader(inputfile):
         blacklist.append(row[0])
 
-if args.Squad_size == None:
-    C= 16
-else:
-    C = args.Squad_size #bots per squad
+C = args.Squad_size 
 
 N = 18              # name length
 
@@ -149,7 +146,7 @@ for i in range(args.NumOfBots):
             os.rename(overflowfile, project_dir+"\\acounts"+'\\Squad_'+(df.columns[0])+".csv")
 #captcha bypass/or bot will idealy go somewere here  ¯\_(ツ)_/¯ or sobhans nephew. idk
 #==-=-==-===-====-===---------------=====-====-===-===-=====-=-=-=-=-=-=-=--==-----
-    input()     
+    input("finished/no captcha. press enter here: ")     
 
     print("starting friend request accept")
     #dangerous======================================================================================================================
@@ -172,7 +169,7 @@ for i in range(args.NumOfBots):
         friendRequest.click()
 
     time.sleep(2)
-    input()#check if user is ready to make the next bot
+    input("Ready for next bot. press enter here: ")#check if user is ready to make the next bot
     # driver.quit()
         
 print(str(invalid)+" names failed.")
