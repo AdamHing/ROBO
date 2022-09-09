@@ -8,5 +8,4 @@
 4. open leader account again and accept bot friend requests.
 
 
-
-gui is disfunctional just some personal testing
+I am currently working on a better version of the instructions. 
