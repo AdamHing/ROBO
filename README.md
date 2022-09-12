@@ -16,8 +16,8 @@
 
 
 ## known issues
-joining a game session is janky and easy to break.(currently working on a fix)
-roblox game sessions take up alot of ram.(not much i can about that right now. but the most bots iv tested with is 16)
+1.joining a game session is janky and easy to break.(currently working on a fix)
+2. roblox game sessions take up alot of ram.(not much i can about that right now. (but the most bots iv tested with is 16)
 
 
 
