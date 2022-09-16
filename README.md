@@ -10,6 +10,9 @@
 
 
 
+## To join a session.
+1. join a game with the leader account
+2. run runbots_V2.py 
 
 
 
