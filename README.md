@@ -1,6 +1,7 @@
 # ROBO
 
-
+tools i used in this project include 
+selenium, pyqt5, subprocess 
 ## To make a squad.
 1. make leader account
 2. make bot
