@@ -1,4 +1,5 @@
 # ROBO
+ROBO includes a tool to semi-automaticaly create roblox bot accounts and friend them with your chosen leader account, only requiring a human to do the captcha. 
 
 tools i used in this project include 
 selenium, pyqt5, subprocess 
